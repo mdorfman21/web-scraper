@@ -13,8 +13,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-let MONGOD_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapedNews";
-mongoose.connect(MONGOD_URI, { useNewUrlParser: true });
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapedNews";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 require("./controllers/api_controller")(app);
 
